@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Community Event Portal</title>
+    <style>
+      #welcomeBanner {
+        background-color: blue;
+        color: white;
+        padding: 10px;
+        font-size: 20px;
+      }
+
+      .highlight {
+        background-color: yellow;
+        font-weight: bold;
+        padding: 2px 4px;
+      }
+
+      .event-image {
+        border: 3px solid #333;
+        border-radius: 8px;
+        width: 200px;
+        height: 150px;
+        transition: transform 0.3s ease, z-index 0.3s;
+        cursor: pointer;
+      }
+
+      .event-image.enlarged {
+        transform: scale(2);
+        position: relative;
+        z-index: 10;
+      }
+
+      table {
+        margin-top: 20px;
+        border-collapse: collapse;
+        text-align: center;
+      }
+
+      caption {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      td {
+        padding: 10px;
+      }
+      form {
+        background-color: #f5f5f5;
+        padding: 20px;
+        border-radius: 10px;
+        width: 400px;
+        margin: 20px auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #0066cc;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #004d99;
+      }
+
+      output {
+        display: block;
+        margin-top: 20px;
+        font-weight: bold;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Naviation Bar -->
+    <nav>
+      This is the Navigation Bar
+      <a href="#home">Home</a>
+      <a href="#contacts">Contact</a>
+      <a href="#events">Events</a>
+      <a href="help.html" target="_blank">Help</a>
+    </nav>
+    <!-- Main Section -->
+    <div id="welcomeBanner">Welcome to the portal</div>
+
+    <p>
+      Don't miss our
+      <span style="color: red; font-weight: bold">special offer!</span>
+    </p>
+
+    <p class="highlight">This is an important announcement.</p>
+    <p>
+      Enjoy browsing our <span class="highlight">featured content</span> today!
+    </p>
+
+    <main id="home">
+      This is the main section that has the content about the site. <br /><br />
+      Our portal is dedicated to keeping you connected with the latest
+      happenings in your neighborhood. Whether it’s cultural fests, charity
+      drives, local markets, or sports meets — we’ve got it covered. Stay
+      informed and never miss an opportunity to get involved!
+    </main>
+
+    <section id="events">
+      Events <br /><br />
+      <table>
+        <caption>
+          Snapshots from Our Recent Community Events
+        </caption>
+        <tr>
+          <td>
+            <img
+              src="https://th.bing.com/th/id/OIP.0Gr6JlPwTWWdCu8DmF-BAAHaEQ?w=280&h=180&c=7&r=0&o=5&cb=iwc2&dpr=1.3&pid=1.7"
+              alt="Community Cleanup"
+              title="Community Cleanup Drive"
+              class="event-image"
+              ondblclick="enlargeImage(this)"
+            />
+            <br />Cleanup Drive <br />June 5, 10 AM at Central Park
+          </td>
+          <td>
+            <img
+              src="https://th.bing.com/th/id/OIP.72TcOURpq-d4hc8eaIHzwgHaE8?cb=iwc2&rs=1&pid=ImgDetMain"
+              alt="Summer Fest"
+              title="Summer Fest Celebrations"
+              class="event-image"
+              ondblclick="enlargeImage(this)"
+            />
+            <br />Summer Fest <br />June 5, 10 AM at Central Park
+          </td>
+          <td>
+            <img
+              src="https://th.bing.com/th/id/OIP.ZFaCRXWZBSZ2H4cKmuj_wgHaFj?w=225&h=180&c=7&r=0&o=5&cb=iwc2&dpr=1.3&pid=1.7"
+              alt="Blood Donation Camp"
+              title="Blood Donation Camp 2025"
+              class="event-image"
+              ondblclick="enlargeImage(this)"
+            />
+            <br />Blood Donation <br />June 12–14, Main Street Grounds
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://th.bing.com/th/id/OIP.-F9V5HGURywIEpxYLl3xTgAAAA?w=225&h=180&c=7&r=0&o=5&cb=iwc2&dpr=1.3&pid=1.7"
+              alt="Art Exhibition"
+              title="Art in the Park 2025"
+              class="event-image"
+              ondblclick="enlargeImage(this)"
+            />
+            <br />Art in the Park <br />June 25, 4 PM, Riverside Walk
+          </td>
+          <td>
+            <img
+              src="https://th.bing.com/th/id/OIP.aRWkETbJUFzjQI4TfGRtqwHaD4?w=328&h=180&c=7&r=0&o=5&cb=iwc2&dpr=1.3&pid=1.7"
+              alt="Charity Bake Sale"
+              title="Local Charity Bake Sale"
+              class="event-image"
+              ondblclick="enlargeImage(this)"
+            />
+            <br />Bake Sale <br />June 5, 10 AM at Central Park
+          </td>
+          <td>
+            <img
+              src="https://th.bing.com/th/id/OIP.fzpGloOROFpp-JgKBem2SQHaFj?w=253&h=190&c=7&r=0&o=5&cb=iwc2&dpr=1.3&pid=1.7"
+              alt="Neighborhood Sports"
+              title="Community Sports Meet"
+              class="event-image"
+              ondblclick="enlargeImage(this)"
+            />
+            <br />Sports Meet <br />June 20, 9 AM–3 PM at City Hall
+          </td>
+        </tr>
+      </table>
+
+      Join any of these events and contribute towards building a vibrant and
+      active community.
+    </section>
+
+    <section>
+      <h2 style="text-align: center">Event Promo Video</h2>
+      <video
+        id="promoVideo"
+        width="400"
+        controls
+        oncanplay="videoReadyMessage()"
+      >
+        <source src="promo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <p id="videoStatus" style="color: blue; font-weight: bold"></p>
+    </section>
+
+    <div>
+      <h2 style="text-align: center">Register for the Upcoming Events</h2>
+      <form id="registrationForm" onsubmit="handleSubmit(event)">
+        <div>
+          <label for="name">Name :</label>
+          <input
+            name="name"
+            type="text"
+            id="name"
+            placeholder="Enter your full name"
+            required
+            autofocus
+          />
+        </div>
+        <div>
+          <label for="email">E-Mail :</label>
+          <input
+            name="mail"
+            type="email"
+            id="email"
+            placeholder="example@mail.com"
+            required
+          />
+        </div>
+        <div>
+          <label for="phone">Phone Number :</label>
+          <input
+            name="phone"
+            type="text"
+            id="phone"
+            placeholder="Enter phone number"
+            required
+            onblur="validatePhone()"
+          />
+        </div>
+
+        <div>
+          <label for="date">Date :</label>
+          <input name="date" type="date" id="date" required />
+        </div>
+        <div>
+          <label for="event">Event :</label>
+          <select
+            name="event_name"
+            id="event_name"
+            required
+            onchange="showEventFee()"
+          >
+            <option value="">-- Select an Event --</option>
+            <option value="cleanup_event">Community Cleanup</option>
+            <option value="summer_fest">Summer Fest</option>
+            <option value="blood_donation">Blood Donation</option>
+            <option value="sports_meet">Sports Meet</option>
+          </select>
+          <p id="eventFee" style="font-weight: bold; color: green"></p>
+        </div>
+        <div>
+          <label for="message">Message :</label>
+          <textarea
+            name="message"
+            id="event_message"
+            placeholder="Enter your message or any special requirements"
+            required
+            onkeyup="countChars()"
+          ></textarea>
+          <p id="charCount">Characters: 0</p>
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+        <div>
+          <button type="button" onclick="clearAllPreferences()">
+            Clear Preferences
+          </button>
+        </div>
+
+        <output id="confirmationMessage"></output>
+      </form>
+    </div>
+
+    <section>
+      <h2>Find Nearby Events</h2>
+      <button onclick="getLocation()">📍 Find Nearby Events</button>
+      <p id="locationOutput" style="margin-top: 10px"></p>
+    </section>
+
+    <section id="contact">
+      Contact <br /><br />
+      For general inquiries, partnership opportunities, or event submissions,
+      please contact us at: <br />
+      📧 Email: communityportal@example.com <br />
+      📞 Phone: +1 (555) 123-4567 <br />
+      🏢 Office Address: 123 Main Street, YourTown, USA
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      This is the footer section <br />
+      &copy; 2025 Local Community Event Portal. All rights reserved. <br />
+      Connect with us on
+      <a href="#">Facebook</a>, <a href="#">Twitter</a>,
+      <a href="#">Instagram</a>.
+    </footer>
+
+    <script>
+      console.log("Portal Loaded: Ready for interaction."); // Initial load
+
+      function handleSubmit(event) {
+        event.preventDefault();
+        console.log("Form submission initiated."); // Debug point
+
+        const name = document.getElementById("name").value;
+        const eventType = document.getElementById("event_name").value;
+        const output = document.getElementById("confirmationMessage");
+
+        // Example breakpoint
+        debugger;
+
+        if (eventType) {
+          output.textContent = `Thank you, ${name}! You have successfully registered for the event: ${eventType
+            .replace(/_/g, " ")
+            .toUpperCase()}.`;
+          output.style.color = "green";
+        } else {
+          output.textContent = "Please select a valid event.";
+          output.style.color = "red";
+        }
+      }
+
+      function validatePhone() {
+        const phone = document.getElementById("phone").value;
+        const phoneRegex = /^\d{10}$/;
+        if (!phoneRegex.test(phone)) {
+          alert("Please enter a valid 10-digit phone number.");
+          document.getElementById("phone").focus();
+        }
+      }
+
+      function showEventFee() {
+        const fees = {
+          cleanup_event: "$5",
+          summer_fest: "$10",
+          blood_donation: "Free",
+          sports_meet: "$7",
+        };
+
+        const selected = document.getElementById("event_name").value;
+        const feeOutput = document.getElementById("eventFee");
+        feeOutput.textContent = selected ? `Fee: ${fees[selected]}` : "";
+      }
+
+      function enlargeImage(img) {
+        img.classList.toggle("enlarged");
+      }
+
+      function countChars() {
+        const message = document.getElementById("event_message").value;
+        document.getElementById(
+          "charCount"
+        ).textContent = `Characters: ${message.length}`;
+      }
+
+      function videoReadyMessage() {
+        document.getElementById("videoStatus").textContent =
+          "🎉 Video ready to play!";
+      }
+
+      window.onbeforeunload = function (e) {
+        const form = document.getElementById("registrationForm");
+        const inputs = form.querySelectorAll("input, select, textarea");
+        for (let input of inputs) {
+          if (input.value !== "") {
+            return "You have unsaved changes. Are you sure you want to leave?";
+          }
+        }
+      };
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("registrationForm");
+        const inputs = form.querySelectorAll("input, select");
+
+        inputs.forEach((input) => {
+          const id = input.id;
+          if (!id) return;
+
+          // Restore saved values
+          const savedValue = localStorage.getItem(id);
+          if (savedValue) {
+            if (input.type === "radio") {
+              if (input.value === savedValue) input.checked = true;
+            } else {
+              input.value = savedValue;
+            }
+          }
+
+          // Save on change
+          input.addEventListener("change", () => {
+            if (input.type === "radio") {
+              const name = input.name;
+              const checkedRadio = form.querySelector(
+                `input[name="${name}"]:checked`
+              );
+              if (checkedRadio) {
+                localStorage.setItem(name, checkedRadio.value);
+              }
+            } else {
+              localStorage.setItem(id, input.value);
+            }
+          });
+        });
+
+        // If preferred event is loaded, show its fee
+        if (document.getElementById("event_name").value) {
+          showEventFee();
+        }
+      });
+
+      function clearAllPreferences() {
+        const form = document.getElementById("registrationForm");
+        const inputs = form.querySelectorAll("input, select");
+        inputs.forEach((input) => {
+          if (input.id) localStorage.removeItem(input.id);
+          if (input.name && input.type === "radio")
+            localStorage.removeItem(input.name);
+        });
+        localStorage.clear(); // Optional: remove this line if you have other unrelated data
+        alert("All saved data cleared!");
+        location.reload();
+      }
+
+      function getLocation() {
+        const output = document.getElementById("locationOutput");
+        if (!navigator.geolocation) {
+          output.textContent = "Geolocation is not supported by your browser.";
+          return;
+        }
+
+        navigator.geolocation.getCurrentPosition(
+          function (position) {
+            output.innerHTML = `Your location:<br>Latitude: ${position.coords.latitude}<br>Longitude: ${position.coords.longitude}`;
+            console.log("Coordinates obtained:", position.coords);
+          },
+          function (error) {
+            switch (error.code) {
+              case error.PERMISSION_DENIED:
+                output.textContent =
+                  "Permission denied. Please enable location access.";
+                break;
+              case error.TIMEOUT:
+                output.textContent = "Request timed out. Try again.";
+                break;
+              default:
+                output.textContent = "Unable to retrieve your location.";
+            }
+          },
+          {
+            enableHighAccuracy: true,
+            timeout: 10000,
+            maximumAge: 0,
+          }
+        );
+      }
+    </script>
+  </body>
+</html>
