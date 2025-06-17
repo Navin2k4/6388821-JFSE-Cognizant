@@ -13,8 +13,6 @@ concepts in their projects, ultimately enhancing their ability to write clean, e
 - https://medium.com/@softwaretechsolution/design-pattern-81ef65829de2
 - https://www.javaguides.net/2023/07/design-patterns-quiz.html
 
----
-
 ## Topics To Learn
 
 ### 1. SOLID Principles (Object-Oriented Design)
@@ -24,8 +22,6 @@ concepts in their projects, ultimately enhancing their ability to write clean, e
 - **L** – _Liskov Substitution Principle (LSP)_
 - **I** – _Interface Segregation Principle (ISP)_
 - **D** – _Dependency Inversion Principle (DIP)_
-
----
 
 ### 2. Design Patterns
 
@@ -54,25 +50,16 @@ concepts in their projects, ultimately enhancing their ability to write clean, e
 - Model-View-Controller (MVC)
 - Dependency Injection (DI)
 
----
-
 ## Learning Completed
 
 - Builder Pattern using Computer Build Example
-
----
-
-## Hands-On Pending
-
-- Exercise 3: E-commerce Platform Search Function _(Applies Factory + Strategy)_
-- Exercise 7: Financial Forecasting _(Uses Observer + Command)_
-
----
 
 ## Hands-On Completed
 
 - Exercise 1: Implementing the Singleton Pattern
 - Exercise 2: Implementing the Factory Method Pattern
+- Exercise 3: E-commerce Platform Search Function \_(Applies Factory + Strategy)
+- Exercise 7: Financial Forecasting _(Uses Observer + Command)_
 
 ## Modules Seperated to learn
 
