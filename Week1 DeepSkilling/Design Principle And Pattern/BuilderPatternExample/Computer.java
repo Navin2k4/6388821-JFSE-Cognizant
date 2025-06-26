@@ -6,7 +6,6 @@ public class Computer {
     private final boolean hasBluetooth;
     private final boolean hasWiFi;
 
-    // ✅ Private Constructor only accessible by Builder
     private Computer(Builder builder) {
         this.CPU = builder.CPU;
         this.RAM = builder.RAM;
@@ -16,7 +15,6 @@ public class Computer {
         this.hasWiFi = builder.hasWiFi;
     }
 
-    // ✅ Static Nested Builder Class
     public static class Builder {
         private String CPU;
         private String RAM;
@@ -55,13 +53,11 @@ public class Computer {
             return this;
         }
 
-        // 🔨 Final step: build the actual Computer object
         public Computer build() {
             return new Computer(this);
         }
     }
 
-    // ✅ For displaying result
     @Override
     public String toString() {
         return "Computer [CPU=" + CPU + ", RAM=" + RAM + ", storage=" + storage +
