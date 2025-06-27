@@ -1,1 +1,8 @@
 DeepSkilling Materiels
+
+.idea
+target
+.mvn
+mvnw
+mvnw.cmd
+application.properties
