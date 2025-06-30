@@ -1,29 +1,28 @@
 package com.service;
 
 import com.repository.BookRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
 public class BookService {
+    private String serviceName;
+    private BookRepository bookRepository;
 
-    BookRepository bookRepository;
-
-    public BookService() {
-        System.out.println("BookService Constructor Invoked");
+    @Autowired
+    public BookService(@Value("LibraryBookService") String serviceName) {
+        this.serviceName = serviceName;
+        System.out.println("Constructor Injection: Service Name = " + serviceName);
     }
 
+    @Autowired
     public void setBookRepository(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
-        System.out.println("Setter Injection: BookRepository set in BookService");
+        System.out.println("Setter Injection: BookRepository injected");
     }
 
-    public void listBook() {
-        System.out.println("Running ListBook in Service Class (Simulating a DB Fetch))");
-        try {
-            Thread.sleep(100);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+    public void listBooks() {
+        System.out.println("[" + serviceName + "] Listing books...");
     }
-
 }
