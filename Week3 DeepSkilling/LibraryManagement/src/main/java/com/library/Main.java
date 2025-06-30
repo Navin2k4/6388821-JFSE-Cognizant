@@ -9,5 +9,6 @@ public class Main {
         System.out.println("Initializing Application context");
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         BookService bookService = (BookService) context.getBean("bookService");
+        bookService.listBook();
     }
 }
