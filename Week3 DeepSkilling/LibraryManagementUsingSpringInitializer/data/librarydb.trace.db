@@ -1,0 +1,15 @@
+2025-06-30 22:47:58.153084+05:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select * [*]form books"; SQL statement:
+select * form books [42000-232]
+2025-06-30 22:48:07.639009+05:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select * [*]form book"; SQL statement:
+select * form book [42000-232]
+2025-06-30 22:48:09.606185+05:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select * [*]form book"; SQL statement:
+select * form book [42000-232]
+2025-06-30 22:48:10.587201+05:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select * [*]form book"; SQL statement:
+select * form book [42000-232]
+2025-06-30 22:48:12.297971+05:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select * [*]form book"; SQL statement:
+select * form book [42000-232]
