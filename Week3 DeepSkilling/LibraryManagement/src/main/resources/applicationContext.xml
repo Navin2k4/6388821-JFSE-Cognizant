@@ -4,6 +4,17 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <!-- bean definitions here -->
-    <bean id="bookRepository" class="com.repository.BookRepository" />
-    <bean id="bookService" class="com.service.BookService" />
+
+    <!-- Exercise 1
+        <bean id="bookRepository" class="com.repository.BookRepository" />
+        <bean id="bookService" class="com.service.BookService" />
+    -->
+
+    <!--    Exercise 2    -->
+    <bean id="bookService" class="com.service.BookService">
+        <!-- Setter Injection -->
+        <property name="bookRepository" ref="bookRepository"/>
+    </bean>
+    <bean id="bookRepository" class="com.repository.BookRepository"/>
+
 </beans>
