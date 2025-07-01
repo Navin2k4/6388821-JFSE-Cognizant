@@ -1,0 +1,27 @@
+Logger
+
+LoggerFactory.getLogger(Class) is used to create a logger instance bound to the given class (for contextual logging).
+static final is used for creating a single constant logger instance.
+Naming convention: LOGGER in uppercase for constants (optional but standard).
+LOGGER.info(...) is used to log messages — depending on your logging level setup (info, debug, etc.).
+LOGGER.trace("Trace message");
+LOGGER.debug("Debug message");
+LOGGER.info("Startup complete");
+LOGGER.warn("Potential issue detected");
+LOGGER.error("An error occurred", exception);
+
+Created the Country model
+@Entity
+@Table(name = "Country")
+@Data
+public class Country {
+    @Id
+    @Column(name = "code")
+    private String code;
+    @Column(name = "name")
+    private String name;
+}
+•	@Entity is an indicator to Spring Data JPA that it is an entity class for the application
+•	@Table helps in defining the mapping database table
+•	@Id helps is defining the primary key
+•	@Column helps in defining the mapping table column
